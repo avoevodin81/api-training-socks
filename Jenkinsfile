@@ -4,12 +4,15 @@ pipeline {
         maven "MAVEN"
         jdk "JDK"
     }
-    stage("checkout repo") {
+    stages {
+        stage("checkout repo") {
+            steps {
                 git branch: 'master',
                     credentials: 'ddf1c6a3-dc71-4bd8-846b-257e838f73ae',
                     url: 'https://github.com/avoevodin81/api-training-socks.git'
             }
-    stages {
+        }
+
         stage('Initialize') {
                     steps {
                         echo "PATH = ${M2_HOME}/bin:${PATH}"
