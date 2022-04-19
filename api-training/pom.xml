@@ -21,6 +21,8 @@
         <jackson.version>2.13.2.2</jackson.version>
         <lombock.version>1.18.20</lombock.version>
         <javafaker.version>1.0.2</javafaker.version>
+
+        <aspectj.version>1.8.10</aspectj.version>
     </properties>
 
     <dependencies>
@@ -81,7 +83,6 @@
             <artifactId>owner</artifactId>
             <version>1.0.12</version>
         </dependency>
-
 
     </dependencies>
 
