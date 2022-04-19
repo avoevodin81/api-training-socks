@@ -14,18 +14,22 @@ pipeline {
         }
 
         stage('Initialize') {
-                    steps {
-                        echo "PATH = ${M2_HOME}/bin:${PATH}"
-                        echo "M2_HOME = /opt/maven"
-                    }
+            steps {
+                echo "PATH = ${M2_HOME}/bin:${PATH}"
+                echo "M2_HOME = /opt/maven"
                 }
+        }
 
         stage("build") {
-            sh 'mvn compile'
+            steps {
+                sh 'mvn compile'
+            }
         }
 
         stage("run api tests") {
-            sh 'mvn test'
+            steps {
+                sh 'mvn test'
+            }
         }
     }
 
