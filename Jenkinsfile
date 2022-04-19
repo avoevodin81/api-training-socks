@@ -6,11 +6,11 @@ node {
     }
 
     stage("build") {
-        sh "mvn compile"
+        sh 'mvn compile'
     }
 
     stage("run api tests") {
-        sh "mvn test"
+        sh 'mvn test'
     }
 
 }
