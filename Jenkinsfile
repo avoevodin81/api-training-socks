@@ -17,8 +17,8 @@ pipeline {
             steps {
                 echo "PATH = ${M2_HOME}/bin:${PATH}"
                 echo "M2_HOME = /opt/maven"
-                echo "JAVA_HOME = /usr/java"
-                }
+                echo "JAVA_HOME = /usr/java/bin"
+            }
         }
 
         stage("build") {
