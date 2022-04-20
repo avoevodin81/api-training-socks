@@ -27,7 +27,7 @@ pipeline {
 
         stage("run api tests") {
             steps {
-                sh 'mvn test'
+                sh 'mvn test -Dlogging=${LOGGING}'
             }
         }
     }
