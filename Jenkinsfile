@@ -8,7 +8,7 @@ pipeline {
         stage("checkout repo") {
             steps {
                 git branch: 'master',
-                    credentialsId: 'ddf1c6a3-dc71-4bd8-846b-257e838f73ae',
+                    credentialsId: 'cd25dd89-041f-4d30-a249-d1ec63c92df9',
                     url: 'https://github.com/avoevodin81/api-training-socks.git'
             }
         }
@@ -17,7 +17,6 @@ pipeline {
             steps {
                 echo "PATH = ${M2_HOME}/bin:${PATH}"
                 echo "M2_HOME = /opt/maven"
-                echo "JAVA_HOME = /opt/java/openjdk"
             }
         }
 
