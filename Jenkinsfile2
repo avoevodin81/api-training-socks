@@ -1,7 +1,7 @@
 node {
     stage("checkout repo") {
         git branch: 'master',
-            credentials: 'ddf1c6a3-dc71-4bd8-846b-257e838f73ae',
+            credentials: 'cd25dd89-041f-4d30-a249-d1ec63c92df9',
             url: 'https://github.com/avoevodin81/api-training-socks.git'
     }
 
