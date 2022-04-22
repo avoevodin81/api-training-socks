@@ -34,7 +34,7 @@ pipeline {
         allure([
             includeProperties: false,
             jdk: '',
-            properties[],
+            properties: [],
             reportBuildPolicy: 'ALWAYS',
             results: [[path: 'api-training/target/allure-results']]
         ])
