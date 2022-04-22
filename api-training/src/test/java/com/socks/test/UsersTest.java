@@ -33,7 +33,7 @@ public class UsersTest {
         faker = new Faker(new Locale(config.locale()));
     }
 
-    @Test(enabled = false)
+    @Test
     public void testCanRegisterNewUser() {
         UserPayload user = new UserPayload()
                 .username(RandomStringUtils.randomAlphanumeric(6))
@@ -51,7 +51,7 @@ public class UsersTest {
                 .body("id", not(emptyString()));
     }
 
-    @Test(enabled = false)
+    @Test
     public void testCanNotRegisterSameUserTwice() {
         UserPayload user = new UserPayload()
                 .username(RandomStringUtils.randomAlphanumeric(6))
