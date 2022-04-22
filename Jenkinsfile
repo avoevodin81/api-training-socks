@@ -30,6 +30,14 @@ pipeline {
                 sh 'mvn test -Dlogging=${LOGGING}'
             }
         }
+
+        allure([
+            includeProperties: false,
+            jdk: '',
+            properties[],
+            reportBuildPolicy: 'ALWAYS',
+            results: [[path: 'api-training/target/allure-results']]
+        ])
     }
 
 }
