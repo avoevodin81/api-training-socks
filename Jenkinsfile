@@ -27,7 +27,9 @@ pipeline {
 
         stage("run api tests") {
             steps {
-                sh 'mvn test -Dlogging=${LOGGING}'
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    sh 'mvn test -Dlogging=${LOGGING}'
+                }
             }
         }
 
