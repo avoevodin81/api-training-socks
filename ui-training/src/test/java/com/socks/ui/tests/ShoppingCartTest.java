@@ -22,7 +22,7 @@ public class ShoppingCartTest extends BaseUITest {
         shoppingCartPage.totalAmount().shouldHave(Condition.exactText("$104.98"));
     }
 
-    @Test
+    @Test(enabled = false)
     public void userCanDeleteItemFromCart() {
         ShoppingCartPage.open();
 
