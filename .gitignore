@@ -2,3 +2,4 @@
 *target/
 *.iml
 .allure/
+ui-training/build/
