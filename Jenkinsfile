@@ -28,7 +28,7 @@ pipeline {
         stage("run api tests") {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    sh 'mvn -pl api-training test -Dlogging=${LOGGING}'
+                    sh 'mvn -pl api-training install -Dlogging=${LOGGING}'
                 }
             }
         }
@@ -36,7 +36,7 @@ pipeline {
         stage("run ui tests") {
                     steps {
                         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                            sh 'mvn -pl ui-training test -Dlogging=${LOGGING}'
+                            sh 'mvn -pl ui-training install -Dlogging=${LOGGING}'
                         }
                     }
                 }
