@@ -19,7 +19,7 @@ public class SelenoidDriverProvider implements WebDriverProvider {
         DesiredCapabilities browser = new DesiredCapabilities();
         browser.setBrowserName("chrome");
         browser.setVersion("100.0");
-//        browser.setCapability("enableVNC", true);
+        browser.setCapability("enableVNC", true);
 
         try{
             RemoteWebDriver driver = new RemoteWebDriver(
