@@ -33,13 +33,13 @@ pipeline {
             }
         }
 
-        stage("run ui tests") {
-                    steps {
-                        catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                            sh 'mvn -pl ui-training test -Dlogging=${LOGGING}'
-                        }
-                    }
-                }
+//         stage("run ui tests") {
+//                     steps {
+//                         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+//                             sh 'mvn -pl ui-training test -Dlogging=${LOGGING}'
+//                         }
+//                     }
+//                 }
 
         stage("reports") {
             steps {
@@ -49,8 +49,9 @@ pipeline {
                         jdk: '',
                         properties: [],
                         reportBuildPolicy: 'ALWAYS',
-                        results: [[path: 'api-training/target/allure-results'],
-                                  [path: 'ui-training/target/allure-results']]
+                        results: [[path: 'api-training/target/allure-results']
+//                                   [path: 'ui-training/target/allure-results']
+                                  ]
                     ])
                 }
             }
