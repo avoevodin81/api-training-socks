@@ -58,4 +58,10 @@ pipeline {
         }
 
     }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'pom.xml', fingerprint: true
+        }
+    }
 }
