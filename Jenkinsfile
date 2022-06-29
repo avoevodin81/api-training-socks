@@ -59,9 +59,9 @@ pipeline {
 
     }
 
-//     post {
-//         always {
-//             archiveArtifacts artifacts: 'pom.xml', fingerprint: true
-//         }
-//     }
+    post {
+        always {
+            archiveArtifacts artifacts: '**/index.html', fingerprint: true
+        }
+    }
 }
